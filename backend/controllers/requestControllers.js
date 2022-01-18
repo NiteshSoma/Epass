@@ -47,7 +47,6 @@ const updateRequest = asyncHandler(async (req, res) => {
     request.origin = origin;
     request.destination = destination;
     request.date = date;
-
     const updatedRequest = await request.save();
     res.status(201).json(updatedRequest);
   } else {
